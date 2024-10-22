@@ -69,6 +69,17 @@ class Game:
                 rect = (pos.col * SQSIZE, pos.row * SQSIZE, SQSIZE, SQSIZE)
                 pygame.draw.rect(surface, color, rect)
 
+        '''
+        if(self.board.last_ball_move):
+            initial = self.board.last_ball_move.initial
+            final = self.board.last_ball_move.final
+
+            for pos in [initial, final]:
+                color = (44,43,41)
+                rect = (pos.col * SQSIZE, pos.row * SQSIZE, SQSIZE, SQSIZE)
+                pygame.draw.rect(surface, color, rect)
+        '''
+
     def show_hover(self, surface):
         if self.hovered:
             color = (180,180,180)

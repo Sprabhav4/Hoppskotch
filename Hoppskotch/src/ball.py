@@ -1,4 +1,5 @@
 import os
+from const import *
 
 class Ball():
     def __init__(self, texture = None, texture_rect = None):
@@ -6,5 +7,5 @@ class Ball():
         self.set_texture()
         self.texture_rect = texture_rect
     
-    def set_texture(self, size = 80):
-        self.texture = os.path.join(f'assets/images/imgs-{size}px/football.png')
+    def set_texture(self):
+        self.texture = BALL_80

@@ -20,14 +20,15 @@ class Square:
         return self.post != None
     
     def is_empty(self):
-        return (self.knight == None and self.ball == None and self.post == None) 
+        return (self.knight == None and self.ball == None and self.post == None)
     
-    def can_have_ball(self):
-        return (self.knight == None and self.ball == None and self.post == None and self.row > 0 and self.row < 7 and self.col > 0 and self.col < 7)
+    def remove_ball(self):
+        self.ball = None
+        return
     
     @staticmethod
     def in_range(*args):
         for arg in args:
             if arg < 0 or arg > 7:
-                return False  
+                return False 
         return True
